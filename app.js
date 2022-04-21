@@ -39,6 +39,7 @@ botonlimpiar.addEventListener("click",function(){
     inputmonitor.value="";
     inputvideo.value="";
     inputprecio.value="";
+    numerocomputador=1;
 })
 //funcion boton comparar
 botoncomparar.addEventListener("click",function(){
@@ -73,8 +74,7 @@ function vistapccomporacion(){
     //card vista de primer computador
     let computadora1html = `<div class="card m-3" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Computadora.</p>
+      <h5 class="card-title">Computadora 1</h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Disco duro : ${computador1[0]} </li>
@@ -88,8 +88,7 @@ function vistapccomporacion(){
 
     let computadora2html = `<div class="card m-3" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Computadora.</p>
+      <h5 class="card-title">Computadora 2</h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Disco duro : ${computador2[0]} </li>
@@ -174,12 +173,12 @@ function comparacion(){
 }
 
 //creando articulo de pc
+var numerocomputador=1
 function cardfunction (inputdisco,inputram,inputmonitor,inputvideo,inputprecio){
     cardhtml = `<div class="card m-3" style="width: 18rem;">
     <img src="img/razen.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Computadora.</p>
+      <h5 class="card-title">computadora${numerocomputador}</h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Disco duro : ${inputdisco} </li>
@@ -190,5 +189,6 @@ function cardfunction (inputdisco,inputram,inputmonitor,inputvideo,inputprecio){
     </ul>
     
     </div>`;
+    numerocomputador++;
     return cardhtml;
 }
